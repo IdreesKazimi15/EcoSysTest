@@ -12,16 +12,6 @@
         <p id="totalUnits"></p>
         <button onclick="goBack()">Go Back</button>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const totalUnits = urlParams.get('totalUnits');
-            document.getElementById('totalUnits').textContent = `Total Units: ${totalUnits}`;
-
-            window.goBack = function() {
-                window.history.back();
-            };
-        });
-    </script>
+    <script src="total_units.js"></script>
 </body>
 </html>
