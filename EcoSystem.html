@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSystem</title>
+    <link rel="stylesheet" href="EcoSystem.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EcoSystem Questionnaire</h1>
+        <form id="energy-form">
+            <h2>Household Information</h2>
+            <label for="householdSize">Household Size:</label>
+            <input type="number" id="householdSize" name="householdSize" required>
+            
+            <label for="houseSize">House Size (sq ft):</label>
+            <input type="number" id="houseSize" name="houseSize" required>
+            
+            <label for="homeType">Type of Home:</label>
+            <select id="homeType" name="homeType" required>
+                <option value="detached">Detached House</option>
+                <option value="apartment">Apartment</option>
+                <option value="townhouse">Townhouse</option>
+            </select>
+            
+            <label for="location">Area:</label>
+            <input type="text" id="location" name="location" required>
+
+            <h2>Appliance Usage</h2>
+            <label>Appliances Owned:</label>
+            <div class="appliance-group">
+                <div>
+                    <label for="refrigeratorQuantity">Refrigerator</label>
+                    <input type="number" id="refrigeratorQuantity" name="refrigeratorQuantity" placeholder="Quantity" min="0">
+                    <input type="number" id="refrigeratorUsage" name="refrigeratorUsage" placeholder="Usage (hours/day)" min="0">
+                </div>
+                <div>
+                    <label for="washingMachineQuantity">Washing Machine</label>
+                    <input type="number" id="washingMachineQuantity" name="washingMachineQuantity" placeholder="Quantity" min="0">
+                    <input type="number" id="washingMachineUsage" name="washingMachineUsage" placeholder="Usage (hours/day)" min="0">
+                </div>
+                <div>
+                    <label for="microwaveQuantity">Microwave Oven</label>
+                    <input type="number" id="microwaveQuantity" name="microwaveQuantity" placeholder="Quantity" min="0">
+                    <input type="number" id="microwaveUsage" name="microwaveUsage" placeholder="Usage (hours/day)" min="0">
+                </div>
+                <div>
+                    <label for="geyserQuantity">Geyser</label>
+                    <input type="number" id="geyserQuantity" name="geyserQuantity" placeholder="Quantity" min="0">
+                    <input type="number" id="geyserUsage" name="geyserUsage" placeholder="Usage (hours/day)" min="0">
+                </div>
+                <div>
+                    <label for="acQuantity">Air Conditioner</label>
+                    <input type="number" id="acQuantity" name="acQuantity" placeholder="Quantity" min="0">
+                    <input type="number" id="acUsage" name="acUsage" placeholder="Usage (hours/day)" min="0">
+                </div>
+                <div>
+                    <label for="tvQuantity">Television</label>
+                    <input type="number" id="tvQuantity" name="tvQuantity" placeholder="Quantity" min="0">
+                    <input type="number" id="tvUsage" name="tvUsage" placeholder="Usage (hours/day)" min="0">
+                </div>
+                <div>
+                    <label for="computerQuantity">Computer/Laptop</label>
+                    <input type="number" id="computerQuantity" name="computerQuantity" placeholder="Quantity" min="0">
+                    <input type="number" id="computerUsage" name="computerUsage" placeholder="Usage (hours/day)" min="0">
+                </div>
+            </div>
+
+            <label for="energyEfficiency">Are appliances Energy Efficient (Energy Star rated)?:</label>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="energyEfficiencyYes" name="energyEfficiency" value="yes" required> 
+                    <label for="energyEfficiencyYes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="energyEfficiencyNo" name="energyEfficiency" value="no" required> 
+                    <label for="energyEfficiencyNo">No</label>
+                </div>
+            </div>
+            
+            <h2>Lighting</h2>
+            <label for="lightingType">Type of Lighting:</label>
+            <input type="text" id="lightingType" name="lightingType" required>
+            
+            <label for="lightingUsage">Lighting Usage (hours per day):</label>
+            <input type="number" id="lightingUsage" name="lightingUsage" required>
+            
+            <h2>Habits and Behavior</h2>
+            <label>Energy Conservation Habits:</label>
+            <div class="checkbox-group">
+                <div>
+                    <input type="checkbox" id="turn_off_lights" name="energyConservationHabits" value="turn_off_lights"> 
+                    <label for="turn_off_lights">Turning off lights when not in use</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="unplug_devices" name="energyConservationHabits" value="unplug_devices"> 
+                    <label for="unplug_devices">Unplugging devices</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="use_fans" name="energyConservationHabits" value="use_fans"> 
+                    <label for="use_fans">Using ceiling fans instead of AC</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="use_natural_light" name="energyConservationHabits" value="use_natural_light"> 
+                    <label for="use_natural_light">Using natural light during the day</label>
+                </div>
+            </div>
+
+            <label for="peakUsageAwareness">Awareness of Peak Usage:</label>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="peakUsageAwarenessYes" name="peakUsageAwareness" value="yes" required> 
+                    <label for="peakUsageAwarenessYes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="peakUsageAwarenessNo" name="peakUsageAwareness" value="no" required> 
+                    <label for="peakUsageAwarenessNo">No</label>
+                </div>
+            </div>
+
+            <label for="usageDuringPeakHours">Usage During Peak Hours:</label>
+            <select id="usageDuringPeakHours" name="usageDuringPeakHours" required>
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+                <option value="always">Always</option>
+            </select>
+
+            <h2>Additional Information</h2>
+            <label for="averageBill">Average Monthly Electricity Bill (₹):</label>
+            <input type="number" id="averageBill" name="averageBill" required>
+
+            <label for="lastMonthBill">Electricity Bill Last Month (₹):</label>
+            <input type="number" id="lastMonthBill" name="lastMonthBill" required>
+            
+            <label for="renewableEnergy">Use of Renewable Energy:</label>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="renewableEnergyYes" name="renewableEnergy" value="yes" required> 
+                    <label for="renewableEnergyYes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="renewableEnergyNo" name="renewableEnergy" value="no" required> 
+                    <label for="renewableEnergyNo">No</label>
+                </div>
+            </div>
+            
+            <label for="energyEfficiencyInterest">Interest in Energy Efficiency (1-10):</label>
+            <input type="number" id="energyEfficiencyInterest" name="energyEfficiencyInterest" min="1" max="10" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="EcoSystem2.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Units Used</title>
+    <link rel="stylesheet" href="total_units.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Total Units Used</h1>
+        <p id="totalUnits"></p>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const totalUnits = urlParams.get('totalUnits');
+            document.getElementById('totalUnits').textContent = `Total Units: ${totalUnits}`;
+
+            window.goBack = function() {
+                window.history.back();
+            };
+        });
+    </script>
+</body>
+</html>
