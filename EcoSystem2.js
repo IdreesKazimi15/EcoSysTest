@@ -1,7 +1,7 @@
 const form = document.getElementById('energy-form');
 
 form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting the default way
+    event.preventDefault(); 
 
     if (validateForm()) {
         calculateTotalUnits();
